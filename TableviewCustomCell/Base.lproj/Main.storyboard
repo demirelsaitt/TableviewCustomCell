@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgM-q9-Vu4">
-                                                    <rect key="frame" x="120.66666666666669" y="36" width="150" height="21"/>
+                                                    <rect key="frame" x="120.66666666666669" y="27" width="150" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="EOD-fg-SuQ"/>
                                                     </constraints>
@@ -36,10 +36,21 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLg-98-Cxv">
+                                                    <rect key="frame" x="325.66666666666669" y="21" width="50.333333333333314" height="35"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Ara"/>
+                                                    <connections>
+                                                        <action selector="butonTikla:" destination="Zzf-he-9Wy" eventType="touchUpInside" id="EWg-CR-snk"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ZgM-q9-Vu4" firstAttribute="top" secondItem="cqG-zb-OJK" secondAttribute="topMargin" constant="25" id="HHB-AS-lVh"/>
+                                                <constraint firstItem="jLg-98-Cxv" firstAttribute="top" secondItem="cqG-zb-OJK" secondAttribute="topMargin" constant="10" id="Dto-l2-9Kn"/>
+                                                <constraint firstItem="ZgM-q9-Vu4" firstAttribute="top" secondItem="cqG-zb-OJK" secondAttribute="topMargin" constant="16" id="HHB-AS-lVh"/>
                                                 <constraint firstItem="ZgM-q9-Vu4" firstAttribute="centerX" secondItem="cqG-zb-OJK" secondAttribute="centerX" id="OiC-wW-jsY"/>
+                                                <constraint firstItem="jLg-98-Cxv" firstAttribute="trailing" secondItem="cqG-zb-OJK" secondAttribute="trailingMargin" constant="5" id="U5l-63-wZb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jLg-98-Cxv" secondAttribute="bottom" constant="8" id="mLV-vk-Sul"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

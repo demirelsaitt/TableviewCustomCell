@@ -38,7 +38,12 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController:UITableViewDelegate,UITableViewDataSource {
+extension ViewController:UITableViewDelegate,UITableViewDataSource,TableViewHucreProtocol {
+    
+    func hucreUzerindekiButonTiklandi(indexPath: IndexPath) {
+        print("Buton tıklandı: \(kisilerListe[indexPath.row].kisiAd!)")
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1 //1 bölümden oluşucak
     }
@@ -52,6 +57,9 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
         
         cell.labelKisiler.text = "\(gelenKisi.kisiId!). \(gelenKisi.kisiAd!) - \(gelenKisi.kisiTel!)"
         //cell nesnesi ile istediğin bütün görsel nesnelere ulaşabilirsin.
+        
+        cell.hucreProtocol = self
+        cell.indexPath = indexPath
         
         return cell
     }
